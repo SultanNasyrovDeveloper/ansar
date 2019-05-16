@@ -1,0 +1,8 @@
+.ingredients-container{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(80px, 1fr));
+}
+
+.ingr-column ul{
+
+}
