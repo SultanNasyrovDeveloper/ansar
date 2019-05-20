@@ -107,7 +107,7 @@
                     </div>
 
                     <div class="lead rightmargin-lg leftmargin-lg">
-                        {{ site_settings.about_us }}
+                        {{ page_settings.block_aboutus_body }}
                     </div>
 
                 </div>
@@ -117,20 +117,21 @@
             <div class="container clearfix topmargin-lg">
 
 					<div class="col_three_fifth topmargin-sm bottommargin" style="height: 100%;">
-						<img data-animate="fadeInLeftBig" src="{{ page_settings.block_test_background.url }}" alt="Imac"
+						<img data-animate="fadeInLeftBig" src="{{ page_settings.block_sale_background.url }}" alt="Imac"
                         style="width: 100%; height: 100%">
 					</div>
 
 					<div class="col_two_fifth topmargin-sm bottommargin-lg col_last">
 
 						<div class="heading-block">
-							<h2>Retina Device Ready.</h2>
-							<span>Fabulously Sharp &amp; Intuitive on your HD Devices.</span>
+							<h2>{{ page_settings.block_sale_title }}</h2>
+							<span>{{ page_settings.block_sale_subtitle }}</span>
 						</div>
 
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus deserunt, nobis quae eos provident quidem. Quaerat expedita dignissimos perferendis, nihil quo distinctio eius architecto reprehenderit maiores.</p>
+						<p>{{ page_settings.block_sale_text }}</p>
 
-						<a href="#" class="button button-border button-rounded button-large noleftmargin topmargin-sm">Experience More</a>
+						<a href="#modal-login" data-lightbox="inline"
+                           class="button button-border button-rounded button-large noleftmargin topmargin-sm">Купить</a>
 
 					</div>
                 <div class="line"></div>
@@ -148,7 +149,7 @@
                         <div class="col_one_third nomargin modal-padding">
                             <div class="feature-box fbox-center fbox-light fbox-plain advantage" style="padding: 3em 1em;">
                                 <div class="fbox-icon">
-                                    <a href="#"><img src="{{ advantage.icon.url }}" alt=""></a>
+                                    <a><img src="{{ advantage.icon.url }}" alt=""></a>
                                 </div>
                                 <h3>{{ advantage.tagline }}</h3>
                                 <p>{{ advantage.text }}</p>
