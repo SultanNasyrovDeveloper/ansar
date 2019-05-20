@@ -98,10 +98,9 @@
 					<nav id="primary-menu">
 
 						<ul style="border-right: none">
-                            <li class="mega-menu"><a href="#"><div>Главная</div></a></li>
-                            <li class="mega-menu"><a href="#"><div>Масла</div></a></li>
+                            <li class="mega-menu"><a href="{% url 'index' %}"><div>Главная</div></a></li>
+                            <li class="mega-menu"><a href="{% url 'products-list' %}"><div>Масла</div></a></li>
                             <li class="mega-menu"><a href="#"><div>О компании</div></a></li>
-                            <li class="mega-menu"><a href="#"><div>Shortcodes</div></a></li>
 							<li class="mega-menu current" style="height: inherit">
                                 <a href="">
                                     {{ site_settings.phone }}
