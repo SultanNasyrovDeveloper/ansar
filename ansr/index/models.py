@@ -17,12 +17,19 @@ class IndexPageSettings(models.Model):
     block_products_description = models.CharField(max_length=150, null=True, blank=True,
                                                   verbose_name='Описание блока карусель товаров')
 
-    block_test_background = models.FileField(upload_to='test/', verbose_name='Фон блока')
-    block_aboutus_title = models.CharField(max_length=50, null=True, blank=True,
+    block_sale_background = models.FileField(upload_to='test/', verbose_name='Фон блока акция')
+    block_sale_title = models.CharField(max_length=50, null=True, blank=True,
+                                           verbose_name='Название блока акция')
+    block_sale_subtitle = models.CharField(max_length=150, null=True, blank=True,
+                                        verbose_name='Описание блока акция')
+    block_sale_text = models.CharField(max_length=150, null=True, blank=True,
+                                           verbose_name='Текст блока акция')
+    block_aboutus_title = models.CharField(max_length=250, null=True, blank=True,
                                            verbose_name='Название блока о компании')
-    block_aboutus_description = models.CharField(max_length=150, null=True, blank=True,
+    block_aboutus_description = models.CharField(max_length=250, null=True, blank=True,
                                                  verbose_name='Описание блока о компании')
-
+    block_aboutus_body = models.CharField(max_length=250, null=True, blank=True,
+                                          verbose_name='Текст блока о компании')
     block_advantages_title = models.CharField(max_length=50, null=True, blank=True,
                                               verbose_name='Название блока приемущества')
     block_advantages_description = models.CharField(max_length=150, null=True, blank=True,

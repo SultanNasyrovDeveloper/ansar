@@ -9,4 +9,4 @@ class SiteSettings(models.Model):
     email = models.CharField(max_length=50, null=True, blank=True, verbose_name='Электронная почта организации')
     site_email = models.CharField(max_length=50, null=True, blank=True, verbose_name='Электронная почта сайта',
                                   help_text='Почта для оповещений с сайта')
-    about_us = models.TextField(verbose_name='Текст о нас')
+
