@@ -29,7 +29,7 @@
                             </div>
                         </div>
                         {% if target.badge %}
-                            <div class="sale-flash">{{ target.badge }}</div>
+                            <div class="sale-flash main-color-bg">{{ target.badge }}</div>
                         {% endif %}
 
                     </div><!-- Product Single - Gallery End -->
@@ -82,7 +82,7 @@
                         </div>
                     {% endfor %}
                     <div class="line"></div>
-                    <a href="#modal-login" data-lightbox="inline" class="button rounded">Заказать масло</a>
+                    <a href="#modal-login" data-lightbox="inline" class="button rounded main-color-bg">Заказать масло</a>
 
                 </div>
 
@@ -102,7 +102,7 @@
                                     {% if paragraph.title %}
                                         <h5>{{ paragraph.title }}</h5>
                                     {% endif %}
-                                    <p>{{ paragraph.body }}</p>
+                                    <p class="description-paragraph">{{ paragraph.body }}</p>
                                 {% endfor %}
 
 
@@ -112,7 +112,7 @@
                                     {% if paragraph.title %}
                                         <h5>{{ paragraph.title }}</h5>
                                     {% endif %}
-                                    <p>{{ paragraph.body }}</p>
+                                    <p class="description-paragraph">{{ paragraph.body }}</p>
                                 {% endfor %}
 
                             </div>
@@ -121,8 +121,7 @@
                                     {% if paragraph.title %}
                                         <h5>{{ paragraph.title }}</h5>
                                     {% endif %}
-                                    <p>{{ paragraph.body }}</p>
-                                {% endfor %}
+g                                {% endfor %}
 
 							</div>
 

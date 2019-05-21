@@ -26,7 +26,7 @@
                                     <p  class="d-none d-sm-block banner-paragraph" data-animate="fadeInUp" data-delay="200">
                                        {{ page_settings.banner_text }}
                                     </p>
-                                    <a href="#modal-login" data-lightbox="inline" data-animate="fadeInUp" class="button rounded topmargin-sm">Заказать масло</a>
+                                    <a href="#modal-login" data-lightbox="inline" data-animate="fadeInUp" class="button rounded topmargin-sm main-color-bg">Заказать масло</a>
                                 </div>
                             </div>
                         </div>
@@ -46,8 +46,8 @@
             <!-- PROMO -->
             <div class="section promo promo-full promo-border header-stick bottommargin-lg darkgrey">
                 <div class="container clearfix">
-                    <h3 style="text-align: center">Звоните нам по номеру <span>{{ site_settings.phone }}</span> или пишите на
-                        <span>{{ site_settings.email }}</span></h3>
+                    <h3 style="text-align: center">Звоните нам по номеру <span class="main-color">{{ site_settings.phone }}</span> или пишите на
+                        <span class="main-color">{{ site_settings.email }}</span></h3>
                     <span style="text-align: center">Наши менеджеры с удовольствием помогут вам подобрать товар и проконсультируют вас по любому вопросу</span>
                 </div>
             </div>
@@ -73,7 +73,7 @@
                                             <img src="{{ product.img_mini.url }}" alt="Изображение масла">
 
                                             {% if product.badge %}
-                                                <div class="sale-flash">{{ product.badge }}</div>
+                                                <div class="sale-flash main-color-bg">{{ product.badge }}</div>
                                             {% endif %}
                                             <div class="product-image-caption">
                                             </div>
@@ -86,7 +86,7 @@
                                         </div>
                                         <span class="product-category span-text">Растительное масло</span>
                                         <div class="" style="margin-top: 0.5em">
-                                            <a href="#modal-login" data-lightbox="inline" class="button rounded">Заказать</a>
+                                            <a href="#modal-login" data-lightbox="inline" class="button rounded main-color-bg">Заказать</a>
                                         </div>
 
                                     </div>

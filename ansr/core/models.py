@@ -18,4 +18,7 @@ class SiteSettings(models.Model):
     font_additional = models.FileField(upload_to='fonts/', null=True, blank=True,
                                        verbose_name='Шрифт дополнительных текстов')
 
+    # Colors
+    buttons_color = models.CharField(max_length=20, null=True, blank=True, verbose_name='Цвет кнопок')
+
 

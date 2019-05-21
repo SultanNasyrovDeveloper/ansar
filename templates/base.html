@@ -15,6 +15,14 @@
 	<link rel="stylesheet" href="{% static 'css/dark.css' %}" type="text/css" />
     <style>
 
+        .main-color-bg{
+            background-color: {{ site_settings.buttons_color }} !important;
+        }
+        .main-color{
+           color: {{ site_settings.buttons_color }} !important;
+        }
+
+
 
         @font-face {
             font-family: 'font-icons';
@@ -141,7 +149,7 @@
                             <li class="mega-menu"><a class="sf-with-ul" href="{% url 'index' %}"><div>Главная</div></a></li>
                             <li class="mega-menu"><a class="sf-with-ul" href="{% url 'products-list' %}"><div>Масла</div></a></li>
                             <li class="mega-menu"><a class="sf-with-ul" href="#"><div>О компании</div></a></li>
-							<li class="mega-menu current" style="height: inherit"><a class="sf-with-ul">{{ site_settings.phone }}</a></li>
+							<li class="mega-menu current" style="height: inherit"><a class="sf-with-ul main-color-bg">{{ site_settings.phone }}</a></li>
 						</ul>
 
 					</nav><!-- #primary-menu end -->

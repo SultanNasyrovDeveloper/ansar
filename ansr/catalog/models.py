@@ -52,6 +52,13 @@ class Ingredient(models.Model):
 class ProductDescription(models.Model):
     name = models.CharField(max_length=100, verbose_name='Название')
 
+    class Meta:
+        verbose_name = 'описание продукта'
+        verbose_name_plural = 'описания продукта'
+
+    def __str__(self):
+        return self.name
+
 
 class DescriptionParagraph(models.Model):
     description = models.ForeignKey(ProductDescription, on_delete=models.CASCADE, related_name='paragraphs',
@@ -63,6 +70,8 @@ class DescriptionParagraph(models.Model):
 
     class Meta:
         ordering = ('position', )
+        verbose_name = 'параграф'
+        verbose_name_plural = 'параграфы'
 
     def __str__(self):
         return 'Параграф'
