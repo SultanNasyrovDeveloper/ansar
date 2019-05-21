@@ -30,41 +30,23 @@ class Product(models.Model):
 
 class Ingredient(models.Model):
     """ Базовый класс ингредиента продукта """
+    types = (
+        ('v', 'Витамины'),
+        ('m', 'Минералы'),
+        ('f', 'Жиры'),
+        ('o', 'Остальное')
+    )
+
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='ingredients', verbose_name='Продукт')
     name = models.CharField(max_length=75, verbose_name='Название')
+    type = models.CharField(max_length=20, choices=types, verbose_name='Тип')
     amount = models.CharField(max_length=50, verbose_name='На 100гр.')
 
     class Meta:
-        abstract = True
         ordering = ('name', )
 
-
-class Vitamins(Ingredient):
-    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_query_name='vitamins', verbose_name='Продукт')
-
     def __str__(self):
-        return self.name
-
-
-class Minerals(Ingredient):
-    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_query_name='minerals', verbose_name='Продукт')
-    chemistry_name = models.CharField(max_length=20, verbose_name='Химическое название')
-
-    def __str__(self):
-        return self.name
-
-
-class Fat(Ingredient):
-    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_query_name='fat', verbose_name='Продукт')
-
-    def __str__(self):
-        return self.name
-
-
-class OtherIngredient(Ingredient):
-    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_query_name='other_ingr', verbose_name='Продукт')
-
-    def __str__(self):
-        return self.name
+        return 'Витамин: {}| Продукт: {}'.format(self.name, self.product.name)
 
 
 class ProductDescription(models.Model):

@@ -43,35 +43,30 @@
                         <h1>{{ target.name }}</h1>
                     </header>
                     <div class="line"></div>
-                    <div class="container ingredients-container clearfix">
-                        <div class="ingr-column">
-                            <ul>
-                                <li class="ingr-table-header">Витамины:</li>
-                                {% for vitamin in target.vitamins_set.all %}
-                                    <li><span>{{ vitamin.name }}</span>: {{ vitamin.amount }}мг/100гр.</li>
-                                {% endfor %}
-                            </ul>
-                            <ul>
-                                <li class="ingr-table-header">Минералы:</li>
-                                {% for mineral in target.minerals_set.all %}
-                                    <li><span>{{ mineral.name }}</span>: {{ mineral.amount }}мг/100гр.</li>
-                                {% endfor %}
-                            </ul>
-                        </div>
-                        <div class="ingr-column">
-                            <ul>
-                                <li class="ingr-table-header">Жирные кислоты:</li>
-                                {% for fat in target.fat_set.all %}
-                                    <li><span>{{ fat.name }}</span>: {{ fat.amount }}мг/100гр.</li>
-                                {% endfor %}
-                            </ul>
-                            <ul>
-                                <li class="ingr-table-header">Иное:</li>
-                                {% for ingr in target.otheringredient_set.all %}
-                                    <li><span>{{ ingr.name }}</span>: {{ ingr.amount }}мг/100гр.</li>
-                                {% endfor %}
-                            </ul>
-                        </div>
+                    <div class="container clearfix">
+                        <header>
+                            <h3 class="h3-text">Состав</h3>
+                        </header>
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Элемент</th>
+                                        <th>Тип</th>
+                                        <th>мг на 100гр</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for ingredient in target.ingredients.all %}
+                                        <tr>
+                                            <td>{{ ingredient.name }}</td>
+                                            <td>{{ ingredient.get_type_display }}</td>
+                                            <td>{{ ingredient.amount }}</td>
+                                        </tr>
+                                    {% endfor %}
+
+
+                                </tbody>
+                            </table>
 
                     </div>
                 </div>
@@ -97,7 +92,7 @@
                         <ul class="tab-nav clearfix">
                             <li><a href="#tabs-1"><i class="icon-briefcase-medical"></i><span class="d-none d-md-inline-block">Здоровье</span></a></li>
                             <li><a href="#tabs-2"><i class="icon-info-sign"></i><span class="d-none d-md-inline-block">Косметология</span></a></li>
-                            <li><a href="#tabs-3"><i class="icon-food2"></i><span class="d-none d-md-inline-block">Пищевая промышленность</span></a></li>
+                            <li><a href="#tabs-3"><i class="icon-food2"></i><span class="d-none d-md-inline-block">Кулинария</span></a></li>
                         </ul>
 
                         <div class="tab-container">
