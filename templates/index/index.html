@@ -21,12 +21,12 @@
                     {% for banner in banners %}
                         <div class="swiper-slide dark" style="background-image: url('{{ banner.img.url }}');">
                             <div class="container clearfix">
-                                <div class="slider-caption slider-caption-center">
-                                    <h1 data-animate="fadeInUp" class="uppercase">{{ page_settings.h1 }}</h1>
-                                    <p  class="d-none d-sm-block" data-animate="fadeInUp" data-delay="200">
+                                <div class="slider-caption slider-caption-center banner-caption">
+                                    <h1 data-animate="fadeInUp" class="h1-text">{{ page_settings.h1 }}</h1>
+                                    <p  class="d-none d-sm-block banner-paragraph" data-animate="fadeInUp" data-delay="200">
                                        {{ page_settings.banner_text }}
                                     </p>
-                                    <a href="#modal-login" data-lightbox="inline" data-animate="fadeInUp" class="button rounded">Заказать масло</a>
+                                    <a href="#modal-login" data-lightbox="inline" data-animate="fadeInUp" class="button rounded topmargin-sm">Заказать масло</a>
                                 </div>
                             </div>
                         </div>
@@ -58,8 +58,8 @@
                 <!-- product carousel -->
                 <div class="col_full">
                     <div class="heading-block center">
-                        <h2>{{ page_settings.block_products_title }}</h2>
-                        <span>{{ page_settings.block_products_description }}</span>
+                        <h2 class="h2-text">{{ page_settings.block_products_title }}</h2>
+                        <span class="text-paragraph">{{ page_settings.block_products_description }}</span>
                     </div>
 
                     <div id="oc-products" class="owl-carousel products-carousel carousel-widget" data-margin="20"
@@ -81,8 +81,10 @@
                                     </a>
                                     <div class="line nomargin"></div>
                                     <div class="product-desc center">
-                                        <div class="product-title nomargin"><h3><a href="{{ product.get_absolute_url }}">{{ product.name }}</a></h3></div>
-                                        <span class="product-category">Растительное масло</span>
+                                        <div class="product-title nomargin">
+                                            <h3 class="h3-text"><a href="{{ product.get_absolute_url }}">{{ product.name }}</a></h3>
+                                        </div>
+                                        <span class="product-category span-text">Растительное масло</span>
                                         <div class="" style="margin-top: 0.5em">
                                             <a href="#modal-login" data-lightbox="inline" class="button rounded">Заказать</a>
                                         </div>
@@ -102,11 +104,11 @@
                  data-bottom-top="background-position:0px 0px;" data-top-bottom="background-position:0px -200px;">
                 <div class="container-fluid center clearfix">
                     <div class="heading-block center">
-                        <h2>{{ page_settings.block_aboutus_title }}</h2>
-                        <span>{{ page_settings.block_aboutus_description }}</span>
+                        <h2 class="h2-text">{{ page_settings.block_aboutus_title }}</h2>
+                        <span class="text-paragraph">{{ page_settings.block_aboutus_description }}</span>
                     </div>
 
-                    <div class="lead rightmargin-lg leftmargin-lg">
+                    <div class="lead rightmargin-lg leftmargin-lg h3-text">
                         {{ page_settings.block_aboutus_body }}
                     </div>
 
@@ -124,11 +126,11 @@
 					<div class="col_two_fifth topmargin-sm bottommargin-lg col_last">
 
 						<div class="heading-block">
-							<h2>{{ page_settings.block_sale_title }}</h2>
-							<span>{{ page_settings.block_sale_subtitle }}</span>
+							<h2 class="h2-text">{{ page_settings.block_sale_title }}</h2>
+							<span class="text-paragraph">{{ page_settings.block_sale_subtitle }}</span>
 						</div>
 
-						<p>{{ page_settings.block_sale_text }}</p>
+						<p class="h3-text">{{ page_settings.block_sale_text }}</p>
 
 						<a href="#modal-login" data-lightbox="inline"
                            class="button button-border button-rounded button-large noleftmargin topmargin-sm">Купить</a>
@@ -140,8 +142,8 @@
             <!-- ADVANTAGES -->
             <section class="section center nomargin">
                 <div class="heading-block center topmargin">
-                    <h2>{{ page_settings.block_advantages_title }}</h2>
-                    <span>{{ page_settings.block_advantages_description }}</span>
+                    <h2 class="h2-text">{{ page_settings.block_advantages_title }}</h2>
+                    <span class="text-paragraph">{{ page_settings.block_advantages_description }}</span>
                 </div>
 
                 <div class="advantages" style="display: flex; justify-content: center;">

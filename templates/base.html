@@ -14,6 +14,8 @@
 	<link rel="stylesheet" href="{% static 'css/swiper.css' %}" type="text/css" />
 	<link rel="stylesheet" href="{% static 'css/dark.css' %}" type="text/css" />
     <style>
+
+
         @font-face {
             font-family: 'font-icons';
             src:url('{% static "css/fonts/font-icons.eot" %}');
@@ -46,11 +48,48 @@
             font-weight: normal;
             font-style: normal;
         }
+
+
+        {% if site_settings.font_page_header %}
+            @font-face {
+                font-family: 'Custom font 1';
+                src:url('{{ site_settings.font_page_header.url }}');
+                font-weight: normal;
+                font-style: normal;
+            }
+        {% endif %}
+
+        {% if site_settings.font_block_header %}
+            @font-face {
+                font-family: 'Custom font 2';
+                src:url('{{ site_settings.font_block_header.url }}');
+                font-weight: normal;
+                font-style: normal;
+            }
+        {% endif %}
+
+        {% if site_settings.font_product_header %}
+            @font-face {
+                font-family: 'Custom font 3';
+                src:url('{{ site_settings.font_product_header.url }}');
+                font-weight: normal;
+                font-style: normal;
+            }
+        {% endif %}
+        {% if site_settings.font_additional %}
+            @font-face {
+                font-family: 'Custom font 4';
+                src:url('{{ site_settings.font_additional.url }}');
+                font-weight: normal;
+                font-style: normal;
+            }
+        {% endif %}
     </style>
 	<link rel="stylesheet" href="{% static 'css/font-icons.css' %}" type="text/css" />
 	<link rel="stylesheet" href="{% static 'css/animate.css' %}" type="text/css" />
 	<link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}" type="text/css" />
 	<link rel="stylesheet" href="{% static 'css/responsive.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
 
     {% block css %}
 
@@ -63,6 +102,7 @@
     {% block meta %}
 
     {% endblock %}
+
 
 </head>
 
@@ -133,7 +173,7 @@
 					<div class="col_one_third">
 
 						<div class="widget clearfix">
-                            <h4>Контакты:</h4>
+                            <h4 class="h3-text">Контакты:</h4>
 							<img src="{{ site_settings.logo.url }}" alt="" class="footer-logo" style="max-height: 50px">
 
 							<div>
@@ -148,7 +188,7 @@
 					<div class="col_one_third">
 
 						<div class="widget clearfix">
-							<h4>Отзывы клиентов</h4>
+							<h4 class="h3-text">Отзывы клиентов</h4>
 
 							<div class="fslider testimonial no-image nobg noborder noshadow nopadding" data-animation="slide" data-arrows="false">
 								<div class="flexslider">
@@ -176,7 +216,7 @@
 
 						<div class="widget quick-contact-widget form-widget clearfix">
 
-							<h4>Обратный звонок</h4>
+							<h4 class="h3-text">Обратный звонок</h4>
 
 							<div class="form-result"></div>
 
