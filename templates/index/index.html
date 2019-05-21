@@ -22,7 +22,7 @@
                         <div class="swiper-slide dark" style="background-image: url('{{ banner.img.url }}');">
                             <div class="container clearfix">
                                 <div class="slider-caption slider-caption-center banner-caption">
-                                    <h1 data-animate="fadeInUp" class="h1-text">{{ page_settings.h1 }}</h1>
+                                    <h1 data-animate="fadeInUp" class="h1-text ">{{ page_settings.h1 }}</h1>
                                     <p  class="d-none d-sm-block banner-paragraph" data-animate="fadeInUp" data-delay="200">
                                        {{ page_settings.banner_text }}
                                     </p>
@@ -82,7 +82,7 @@
                                     <div class="line nomargin"></div>
                                     <div class="product-desc center">
                                         <div class="product-title nomargin">
-                                            <h3 class="h3-text"><a href="{{ product.get_absolute_url }}">{{ product.name }}</a></h3>
+                                            <h3 class="h3-text"><a href="{{ product.get_absolute_url }}" class="main-color-hover">{{ product.name }}</a></h3>
                                         </div>
                                         <span class="product-category span-text">Растительное масло</span>
                                         <div class="" style="margin-top: 0.5em">
@@ -133,7 +133,7 @@
 						<p class="h3-text">{{ page_settings.block_sale_text }}</p>
 
 						<a href="#modal-login" data-lightbox="inline"
-                           class="button button-border button-rounded button-large noleftmargin topmargin-sm">Купить</a>
+                           class="button button-border button-rounded button-large noleftmargin topmargin-sm main-color-bg-hover">Купить</a>
 
 					</div>
                 <div class="line"></div>

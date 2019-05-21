@@ -121,7 +121,8 @@
                                     {% if paragraph.title %}
                                         <h5>{{ paragraph.title }}</h5>
                                     {% endif %}
-g                                {% endfor %}
+                                    <p class="description-paragraph">{{ paragraph.body }}</p>
+                                {% endfor %}
 
 							</div>
 
@@ -145,7 +146,7 @@ g                                {% endfor %}
                                                 <img src="{{ product.img_mini.url }}" alt="Изображение масла">
                                             </a>
                                             {% if product.badge %}
-                                                <div class="sale-flash">{{ product.badge }}</div>
+                                                <div class="sale-flash main-color-bg">{{ product.badge }}</div>
                                             {% endif %}
 
                                             <div class="product-overlay">
@@ -153,7 +154,7 @@ g                                {% endfor %}
                                         </div>
                                         <div class="product-desc center">
                                             <span class="product-category">Растительное масло</span>
-                                            <div class="product-title"><h3><a href="{{ product.get_absolute_url }}">{{ product.name }}</a></h3></div>
+                                            <div class="product-title main-color-hover"><h3><a href="{{ product.get_absolute_url }}">{{ product.name }}</a></h3></div>
                                             <div class="product-rating" style="float: none; top: 0;">
                                                 <i class="icon-star3"></i>
                                                 <i class="icon-star3"></i>

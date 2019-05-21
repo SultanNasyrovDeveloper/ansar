@@ -21,6 +21,12 @@
         .main-color{
            color: {{ site_settings.buttons_color }} !important;
         }
+        .main-color-bg-hover:hover{
+            background-color: {{ site_settings.buttons_color }} !important;
+        }
+        .main-color-hover:hover{
+           color: {{ site_settings.buttons_color }} !important;
+        }
 
 
 
@@ -240,7 +246,7 @@
 									</div>
 									{{ form.phone }}
 								</div>
-								<input type="submit" id="quick-contact-form-submit" name="quick-contact-form-submit" class="btn btn-danger nomargin" value="Перезвоните мне">
+								<input type="submit" id="quick-contact-form-submit" name="quick-contact-form-submit" class="btn btn-danger nomargin main-color-bg" value="Перезвоните мне">
 
 							</form>
 
@@ -285,7 +291,7 @@
                         <label class="font-body capitalize" for="login-form-modal-password">Номер телефона:</label>
                         {{ form.phone }}
                     </div>
-                    <input type="submit" value="Заказать" class="button button-rounded btn-block t400 center">
+                    <input type="submit" value="Заказать" class="button button-rounded btn-block t400 center main-color-bg">
                 </form>
 
             </div>
@@ -295,7 +301,7 @@
 
 	<!-- Go To Top
 	============================================= -->
-	<div id="gotoTop" class="icon-angle-up"></div>
+	<div id="gotoTop" class="icon-angle-up main-color-bg-hover"></div>
 
 	<!-- External JavaScripts
 	============================================= -->

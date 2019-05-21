@@ -3,4 +3,6 @@
     grid-template-columns: repeat(2, minmax(80px, 1fr));
 }
 
-.paragraph-
+.description-paragraph{
+    text-indent: 1.5rem;
+}
