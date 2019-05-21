@@ -69,7 +69,7 @@ class DescriptionParagraph(models.Model):
     body = models.TextField(verbose_name='Текст')
 
     class Meta:
-        ordering = ('position', )
+        ordering = ('-position', )
         verbose_name = 'параграф'
         verbose_name_plural = 'параграфы'
 
