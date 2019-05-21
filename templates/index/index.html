@@ -140,25 +140,28 @@
             </div>
 
             <!-- ADVANTAGES -->
-            <section class="section center nomargin">
+            <section class="section center nomargin modal-padding">
                 <div class="heading-block center topmargin">
                     <h2 class="h2-text">{{ page_settings.block_advantages_title }}</h2>
                     <span class="text-paragraph">{{ page_settings.block_advantages_description }}</span>
                 </div>
 
-                <div class="advantages" style="display: flex; justify-content: center;">
+                <div id="posts" class="post-grid grid-container grid-3 clearfix advantages" data-layout="fitRows">
                     {% for advantage in advantages %}
-                        <div class="col_one_third nomargin modal-padding">
-                            <div class="feature-box fbox-center fbox-light fbox-plain advantage" style="padding: 3em 1em;">
-                                <div class="fbox-icon">
-                                    <a><img src="{{ advantage.icon.url }}" alt=""></a>
-                                </div>
-                                <h3>{{ advantage.tagline }}</h3>
-                                <p>{{ advantage.text }}</p>
+                        <div class="entry clearfix">
+                            <div class="entry-image">
+                                <a href="{{ advantage.icon.url }}" data-lightbox="image">
+                                    <img class="image_fade" src="{{ advantage.icon.url }}" alt="{{ advantage.tagline }}">
+                                </a>
+                            </div>
+                            <div class="entry-title">
+                                <h2 class="h2-text">{{ advantage.tagline }}</h2>
+                            </div>
+                            <div class="entry-content">
+                                <p class="text-paragraph">{{ advantage.text }}</p>
                             </div>
                         </div>
                     {% endfor %}
-                </div>
             </section>
 
         </div>

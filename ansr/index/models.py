@@ -61,7 +61,7 @@ class IndexPageBanner(models.Model):
 
 class IndexPageAdvantages(models.Model):
     """  """
-    icon = models.FileField(upload_to='advantages', verbose_name='Иконка')
+    icon = models.FileField(upload_to='advantages', verbose_name='Изображение')
     tagline = models.CharField(max_length=50, verbose_name='Заголовок')
     text = models.CharField(max_length=100, verbose_name='Текст')
 
@@ -82,7 +82,6 @@ class IndexPageTestimonials(models.Model):
     class Meta:
         verbose_name = 'отзыв'
         verbose_name_plural = 'отзывы'
-
 
     def __str__(self):
         return 'Отзыв от {}'.format(self.name)
