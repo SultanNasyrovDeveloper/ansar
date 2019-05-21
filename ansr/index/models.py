@@ -27,7 +27,7 @@ class IndexPageSettings(models.Model):
     block_aboutus_background = models.FileField(upload_to='about_us/', verbose_name='Задний фон блока о компании')
     block_aboutus_title = models.CharField(max_length=250, null=True, blank=True,
                                            verbose_name='Название блока о компании')
-    block_aboutus_description = models.CharField(max_length=250, null=True, blank=True,
+    block_aboutus_description = models.CharField(max_length=750, null=True, blank=True,
                                                  verbose_name='Описание блока о компании')
     block_aboutus_body = models.CharField(max_length=250, null=True, blank=True,
                                           verbose_name='Текст блока о компании')

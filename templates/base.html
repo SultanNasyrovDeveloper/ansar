@@ -135,17 +135,13 @@
 
 					<!-- Primary Navigation
 					============================================= -->
-					<nav id="primary-menu">
+					<nav id="primary-menu" class="style-3">
 
 						<ul style="border-right: none">
-                            <li class="mega-menu"><a href="{% url 'index' %}"><div>Главная</div></a></li>
-                            <li class="mega-menu"><a href="{% url 'products-list' %}"><div>Масла</div></a></li>
-                            <li class="mega-menu"><a href="#"><div>О компании</div></a></li>
-							<li class="mega-menu current" style="height: inherit">
-                                <a href="">
-                                    {{ site_settings.phone }}
-                                </a>
-                            </li>
+                            <li class="mega-menu"><a class="sf-with-ul" href="{% url 'index' %}"><div>Главная</div></a></li>
+                            <li class="mega-menu"><a class="sf-with-ul" href="{% url 'products-list' %}"><div>Масла</div></a></li>
+                            <li class="mega-menu"><a class="sf-with-ul" href="#"><div>О компании</div></a></li>
+							<li class="mega-menu current" style="height: inherit"><a class="sf-with-ul">{{ site_settings.phone }}</a></li>
 						</ul>
 
 					</nav><!-- #primary-menu end -->
