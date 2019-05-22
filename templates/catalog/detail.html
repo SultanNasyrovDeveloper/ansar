@@ -45,11 +45,12 @@
 							============================================= -->
                     <header>
                         <span class="text-paragraph" style="text-align: right;">Масло растительное</span>
-                        <h1 class="h1-text" style="font-size: 3rem !important;">{{ target.name }}</h1>
+                        <h1 class="h1-text nomargin" style="font-size: 3rem !important;">{{ target.name }}</h1>
                     </header>
                     <div class="clearfix nomargin">
-                        <header>
-                            <h3 class="h3-text">Состав</h3>
+                        <header style="margin-bottom: 1rem;">
+                            <a href="{% if target.ingrs_file %}{{ target.ingrs_file.url }}{% endif %}" download="true"
+                               class="h3-text consist main-color-hover text-black-50" title="Скачать полный состав">Состав:</a>
                         </header>
                             <table class="table table-hover">
                                 <thead>

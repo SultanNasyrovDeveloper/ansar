@@ -6,3 +6,8 @@
 .description-paragraph{
     text-indent: 1.5rem;
 }
+
+.consist{
+    text-decoration: underline !important;
+    cursor: pointer;
+}

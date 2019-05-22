@@ -16,6 +16,7 @@ class Product(models.Model):
                                      verbose_name='Текст о кулинарии', related_name='product2')
     beauty_text = models.ForeignKey('ProductDescription', null=True, blank=True, on_delete=models.SET_NULL,
                                     verbose_name='Текст о красоте', related_name='product3')
+    ingrs_file = models.FileField(upload_to='ingredients/', null=True, blank=True, verbose_name='Файл таблицы ингредиентов')
 
     class Meta:
         verbose_name = 'продукт'
