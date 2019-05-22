@@ -105,7 +105,7 @@
                                     {% if paragraph.title %}
                                         <h5 class="h2-text">{{ paragraph.title }}</h5>
                                     {% endif %}
-                                    <p class="description-paragraph text-paragraph">{{ paragraph.body }}</p>
+                                    <p class="description-paragraph text-paragraph">{{ paragraph.body|safe }}</p>
                                 {% endfor %}
 
 
@@ -115,7 +115,7 @@
                                     {% if paragraph.title %}
                                         <h5 class="h2-text">{{ paragraph.title }}</h5>
                                     {% endif %}
-                                    <p class="description-paragraph text-paragraph">{{ paragraph.body }}</p>
+                                    <p class="description-paragraph text-paragraph">{{ paragraph.body|safe }}</p>
                                 {% endfor %}
 
                             </div>
@@ -124,7 +124,7 @@
                                     {% if paragraph.title %}
                                         <h5 class="h2-text">{{ paragraph.title }}</h5>
                                     {% endif %}
-                                    <p class="description-paragraph text-paragraph">{{ paragraph.body }}</p>
+                                    <p class="description-paragraph text-paragraph">{{ paragraph.body|safe }}</p>
                                 {% endfor %}
 
 							</div>
