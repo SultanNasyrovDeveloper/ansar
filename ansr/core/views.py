@@ -11,4 +11,5 @@ class AnsarView(View):
         if form.is_valid():
             print('form is valid')
             form.save()
+            request.session['form_filled'] = True
         return redirect(reverse('index'))

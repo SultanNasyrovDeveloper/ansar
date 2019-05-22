@@ -4,4 +4,6 @@ from .models import Callback
 
 @admin.register(Callback)
 class CallbackAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('name', 'phone', 'created', 'processed')
+    list_filter = ('created', 'processed')
+    readonly_fields = ('created', )

@@ -5,4 +5,8 @@ from .models import SiteSettings
 
 @admin.register(SiteSettings)
 class SiteSettingsAdmin(admin.ModelAdmin):
-    pass
+    fieldsets = (
+        ('Базовые', {'fields': ('logo', ('email', 'phone'))}),
+        ('Шрифты', {'fields': ('font_page_header', 'font_block_header', 'font_product_header', 'font_additional')}),
+        ('Цвета', {'fields': ('buttons_color', )}),
+    )

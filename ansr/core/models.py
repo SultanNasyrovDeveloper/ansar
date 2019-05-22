@@ -21,4 +21,11 @@ class SiteSettings(models.Model):
     # Colors
     buttons_color = models.CharField(max_length=20, null=True, blank=True, verbose_name='Цвет кнопок')
 
+    class Meta:
+        verbose_name = 'Общие настройки сайта'
+        verbose_name_plural = 'Общие настройки сайта'
+
+    def __str__(self):
+        return 'Настройки'
+
 

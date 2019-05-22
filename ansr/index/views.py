@@ -12,6 +12,14 @@ class IndexView(AnsarView):
     def get(self, request, *args, **kwargs):
         context = dict()
         context['form'] = CallbackForm()
+        context['show_success_alert'] = False
+        try:
+            form_is_filled = request.session['form_filled']
+            if form_is_filled:
+                request.session['form_filled'] = False
+                context['show_success_alert'] = True
+        except KeyError:
+            request.session['show_success_alert'] = False
         context['banners'] = IndexPageBanner.objects.all()
         context['products'] = Product.objects.all()
         context['advantages'] = IndexPageAdvantages.objects.all()

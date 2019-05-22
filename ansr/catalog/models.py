@@ -9,14 +9,14 @@ class Product(models.Model):
     img_mini = models.FileField(upload_to='images/', verbose_name='Изображение 1(миниатюра)')
     badge = models.CharField(max_length=15, null=True, blank=True, default=None, verbose_name='Бейдж')
     name = models.CharField(max_length=100, verbose_name='Название')
-
     health_text = models.ForeignKey('ProductDescription', null=True, blank=True, on_delete=models.SET_NULL,
                                     verbose_name='Текст о здоровье', related_name='product')
     cooking_text = models.ForeignKey('ProductDescription', null=True, blank=True, on_delete=models.SET_NULL,
                                      verbose_name='Текст о кулинарии', related_name='product2')
     beauty_text = models.ForeignKey('ProductDescription', null=True, blank=True, on_delete=models.SET_NULL,
                                     verbose_name='Текст о красоте', related_name='product3')
-    ingrs_file = models.FileField(upload_to='ingredients/', null=True, blank=True, verbose_name='Файл таблицы ингредиентов')
+    ingrs_file = models.FileField(upload_to='ingredients/', null=True, blank=True,
+                                  verbose_name='Файл таблицы ингредиентов')
 
     class Meta:
         verbose_name = 'продукт'
@@ -30,7 +30,7 @@ class Product(models.Model):
 
 
 class Ingredient(models.Model):
-    """ Базовый класс ингредиента продукта """
+    """ Модель ингредиента продукта """
     types = (
         ('v', 'Витамины'),
         ('m', 'Минералы'),
@@ -82,6 +82,10 @@ class ProductAdvantage(models.Model):
     icon = models.FileField(upload_to='product_advantages/', null=True, blank=True, verbose_name='Иконка')
     title = models.CharField(max_length=30, verbose_name='Название преимущества')
     text = models.CharField(max_length=150, verbose_name='Описание преимущества')
+
+    class Meta:
+        verbose_name = 'преимущества покупки'
+        verbose_name_plural = 'преимущества покупки'
 
     def __str__(self):
         return self.title
