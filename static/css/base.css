@@ -69,5 +69,18 @@
 }
 
 @media (max-width: 575.98px) {
+    .h1-text{
+        font-family: 'Custom font 1', sans-serif !important;
+        text-transform: uppercase !important;
+        font-size: 2rem !important;
+        letter-spacing: 0.04rem !important;
+    }
+
+    .text-paragraph{
+        font-family: 'Custom font 2', sans-serif !important;
+        text-transform: uppercase !important;
+        font-size: 0.8rem !important;
+        letter-spacing: 0.06rem !important;
+    }
 
 }

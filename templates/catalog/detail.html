@@ -7,6 +7,7 @@
 {% endblock %}
 
 {% block meta %}
+    <title>Купить масло растительное {{ target.name }}</title>
 
 {% endblock %}
 
@@ -43,10 +44,10 @@
                     <!-- Product Single - Pice
 							============================================= -->
                     <header>
-                        <span class="text-paragraph" style="text-align: right">Масло растительное</span>
-                        <h1 class="h1-text">{{ target.name }}</h1>
+                        <span class="text-paragraph" style="text-align: right;">Масло растительное</span>
+                        <h1 class="h1-text" style="font-size: 3rem !important;">{{ target.name }}</h1>
                     </header>
-                    <div class="container clearfix nomargin">
+                    <div class="clearfix nomargin">
                         <header>
                             <h3 class="h3-text">Состав</h3>
                         </header>
@@ -78,8 +79,8 @@
                             <div class="fbox-icon">
                                 <img src="{{ advantage.icon.url }}" alt="Иконка преимущества товара">
                             </div>
-                            <h3>{{ advantage.title }}</h3>
-                            <p class="notopmargin">{{ advantage.text }}</p>
+                            <h3 style="font-size: 0.7rem;">{{ advantage.title }}</h3>
+                            <p class="notopmargin" style="font-size: 0.6rem;">{{ advantage.text }}</p>
                         </div>
                     {% endfor %}
                     <div class="line"></div>
@@ -101,9 +102,9 @@
                             <div class="tab-content clearfix" id="tabs-1">
                                 {% for paragraph in target.health_text.paragraphs.all %}
                                     {% if paragraph.title %}
-                                        <h5>{{ paragraph.title }}</h5>
+                                        <h5 class="h2-text">{{ paragraph.title }}</h5>
                                     {% endif %}
-                                    <p class="description-paragraph">{{ paragraph.body }}</p>
+                                    <p class="description-paragraph text-paragraph">{{ paragraph.body }}</p>
                                 {% endfor %}
 
 
@@ -111,18 +112,18 @@
                             <div class="tab-content clearfix" id="tabs-2">
                                 {% for paragraph in target.beauty_text.paragraphs.all %}
                                     {% if paragraph.title %}
-                                        <h5>{{ paragraph.title }}</h5>
+                                        <h5 class="h2-text">{{ paragraph.title }}</h5>
                                     {% endif %}
-                                    <p class="description-paragraph">{{ paragraph.body }}</p>
+                                    <p class="description-paragraph text-paragraph">{{ paragraph.body }}</p>
                                 {% endfor %}
 
                             </div>
                             <div class="tab-content clearfix" id="tabs-3">
                                 {% for paragraph in target.cooking_text.paragraphs.all %}
                                     {% if paragraph.title %}
-                                        <h5>{{ paragraph.title }}</h5>
+                                        <h5 class="h2-text">{{ paragraph.title }}</h5>
                                     {% endif %}
-                                    <p class="description-paragraph">{{ paragraph.body }}</p>
+                                    <p class="description-paragraph text-paragraph">{{ paragraph.body }}</p>
                                 {% endfor %}
 
 							</div>
@@ -141,7 +142,7 @@
 
                             {% for product in recommendations %}
                                 <div class="oc-item">
-                                    <div class="product iproduct clearfix">
+                                    <div class="product iproduct clearfix pointer-event">
                                         <div class="product-image">
                                             <a href="{{ product.get_absolute_url }}">
                                                 <img src="{{ product.img_mini.url }}" alt="Изображение масла">
@@ -154,8 +155,8 @@
                                             </div>
                                         </div>
                                         <div class="product-desc center">
-                                            <span class="product-category">Растительное масло</span>
-                                            <div class="product-title main-color-hover"><h3><a href="{{ product.get_absolute_url }}">{{ product.name }}</a></h3></div>
+                                            <span class="product-category span-text">Растительное масло</span>
+                                            <div class="product-title main-color-hover"><h3><a href="{{ product.get_absolute_url }}" class="h3-text main-color-hover">{{ product.name }}</a></h3></div>
                                             <div class="product-rating" style="float: none; top: 0;">
                                                 <i class="icon-star3"></i>
                                                 <i class="icon-star3"></i>
