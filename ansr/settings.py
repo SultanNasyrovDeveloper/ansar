@@ -89,6 +89,12 @@ DATABASES = {
     }
 }
 
+EMAIL_HOST = 'smtp.yandex.ru'
+EMAIL_HOST_USER = 'ansar.manager@yandex.ru'
+EMAIL_HOST_PASSWORD = 'oVez4kRoxTjasFBHvNwi'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
