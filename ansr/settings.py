@@ -25,7 +25,7 @@ SECRET_KEY = '%6n1s!!9uqk3@0)0ozlsn(jribts_-if_at$h7#n00_jv5)^gz'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['www.ansar.su', 'ansar.su', '2.59.40.187']
 
 
 # Application definition
