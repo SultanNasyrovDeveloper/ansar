@@ -21,7 +21,7 @@ class IndexView(AnsarView):
         except KeyError:
             request.session['show_success_alert'] = False
         context['banners'] = IndexPageBanner.objects.all()
-        context['products'] = Product.objects.all()
+        context['products'] = Product.objects.filter(display=True)
         context['advantages'] = IndexPageAdvantages.objects.all()
         context['testimonials'] = IndexPageTestimonials.objects.all()
         try:

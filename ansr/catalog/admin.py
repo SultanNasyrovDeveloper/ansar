@@ -11,7 +11,7 @@ class IngredientInlineAdmin(admin.TabularInline):
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
     inlines = (IngredientInlineAdmin, )
-    list_display = ('name', 'badge')
+    list_display = ('display', 'name', 'badge')
     fieldsets = (
         ('Основное', {'fields': ('carousel', 'name', 'badge', 'ingrs_file')}),
         ('Изображения', {'fields': ('img', 'img_mini')}),

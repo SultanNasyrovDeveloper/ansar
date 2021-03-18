@@ -20,5 +20,5 @@ class AnsarView(View):
                 site_settings = SiteSettings.objects.get()
             except SiteSettings.DoesNotExist:
                 site_settings = {}
-            send_mail('Новая заявка с сайта', msg, settings.EMAIL_HOST_USER, (settings.EMAIL_HOST_USER, site_settings.site_email))
+            send_mail('Новая заявка с сайта', msg, settings.EMAIL_HOST_USER, (settings.EMAIL_HOST_USER, ))
             return redirect(reverse('index'))

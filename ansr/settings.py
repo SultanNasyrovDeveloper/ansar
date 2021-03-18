@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '%6n1s!!9uqk3@0)0ozlsn(jribts_-if_at$h7#n00_jv5)^gz'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['www.ansar.su', 'ansar.su', '2.59.40.187']
 
@@ -82,16 +82,16 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'ansar',
-        'USER': 'developer',
-        'PASSWORD': '123456',
+        'USER': 'ansar_user',
+        'PASSWORD': 'nci4379GUCfbk3y6f',
         'HOST': 'localhost',
         'PORT': '',
     }
 }
 
-EMAIL_HOST = 'smtp.yandex.ru'
-EMAIL_HOST_USER = 'ansar.manager@yandex.ru'
-EMAIL_HOST_PASSWORD = 'oVez4kRoxTjasFBHvNwi'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'minakdac@gmail.com'
+EMAIL_HOST_PASSWORD = 'kartingrx8'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
@@ -132,9 +132,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
-STATIC_ROOT = ''
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 

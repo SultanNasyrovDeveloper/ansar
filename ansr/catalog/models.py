@@ -4,6 +4,7 @@ from django.shortcuts import reverse
 
 class Product(models.Model):
     """ Продукт(Масло) """
+    display = models.BooleanField(default=True, verbose_name='Отображается')
     carousel = models.BooleanField(default=False, verbose_name='Отображать в карусели')
     img = models.FileField(upload_to='images/', verbose_name='Изображение 1(Большое')
     img_mini = models.FileField(upload_to='images/', verbose_name='Изображение 1(миниатюра)')
